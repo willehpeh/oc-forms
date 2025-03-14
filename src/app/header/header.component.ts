@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
+import { LogoComponent } from './logo/logo.component';
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [
+    LogoComponent
+  ],
   template: `
 		<header>
 			<nav>
-				<div class="logo">WebDev Academy</div>
+				<app-logo/>
 				<ul>
 					<li><a>Home</a></li>
 					<li><a>Courses</a></li>
@@ -31,31 +34,23 @@ import { Component } from '@angular/core';
       border-bottom: 1px solid rgba(148, 163, 184, 0.1);
     }
 
-    .logo {
-      font-size: 1.75rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, #818cf8 0%, #c4b5fd 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    nav ul {
+    ul {
       display: flex;
       list-style: none;
       gap: 3rem;
     }
 
-    nav a {
+    a {
       text-decoration: none;
       color: #e2e8f0;
       font-weight: 600;
       font-size: 1.1rem;
       transition: all 0.3s ease;
       position: relative;
+      cursor: pointer;
     }
 
-    nav a::after {
+    a::after {
       content: '';
       position: absolute;
       width: 0;
@@ -66,11 +61,11 @@ import { Component } from '@angular/core';
       transition: width 0.3s ease;
     }
 
-    nav a:hover {
+    a:hover {
       color: #818cf8;
     }
 
-    nav a:hover::after {
+    a:hover::after {
       width: 100%;
     }
   `
