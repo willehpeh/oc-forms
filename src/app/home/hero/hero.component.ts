@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
+import { CtaButtonComponent } from './cta-button/cta-button.component';
 
 @Component({
   selector: 'app-hero',
-  imports: [],
+  imports: [
+    CtaButtonComponent
+  ],
   template: `
 		<section id="home" class="hero">
 			<h1>Level Up Your<br>Web Development Skills</h1>
 			<p>Master modern web technologies through hands-on projects and expert-led courses</p>
-			<a class="cta-button">Start Learning Today</a>
+      <app-cta-button>Start Learning Today</app-cta-button>
 		</section>
   `,
   styles: `
@@ -30,7 +33,7 @@ import { Component } from '@angular/core';
       opacity: 0.5;
     }
 
-    .hero h1 {
+    h1 {
       font-size: 4rem;
       font-weight: 800;
       margin-bottom: 1.5rem;
@@ -39,7 +42,7 @@ import { Component } from '@angular/core';
       position: relative;
     }
 
-    .hero p {
+    p {
       font-size: 1.5rem;
       margin-bottom: 3rem;
       color: #e2e8f0;
@@ -47,26 +50,6 @@ import { Component } from '@angular/core';
       margin-left: auto;
       margin-right: auto;
       position: relative;
-    }
-
-    .cta-button {
-      display: inline-block;
-      padding: 1.25rem 2.5rem;
-      background: linear-gradient(135deg, #818cf8 0%, #c4b5fd 100%);
-      color: white;
-      text-decoration: none;
-      border-radius: 1rem;
-      font-weight: 600;
-      font-size: 1.125rem;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(129, 140, 248, 0.4);
-    }
-
-    .cta-button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(129, 140, 248, 0.6);
     }
   `
 })
