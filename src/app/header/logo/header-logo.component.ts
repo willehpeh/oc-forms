@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-logo',
+  selector: 'app-header-logo',
   imports: [],
   template: `
 		<h1 class="logo">WebDev Academy</h1>
@@ -16,6 +16,6 @@ import { Component } from '@angular/core';
       -webkit-text-fill-color: transparent;
     }`
 })
-export class LogoComponent {
+export class HeaderLogoComponent {
 
 }
