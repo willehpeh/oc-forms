@@ -1,5 +1,5 @@
 import { Component, computed, input } from '@angular/core';
-import { Course } from '../course';
+import { Course } from '../../../core/models/course';
 
 @Component({
   selector: 'app-course-card',
