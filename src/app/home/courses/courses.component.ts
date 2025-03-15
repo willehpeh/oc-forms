@@ -7,6 +7,7 @@ import { CourseCardComponent } from './course-card/course-card.component';
   imports: [
     CourseCardComponent
   ],
+  styleUrls: ['./courses.component.scss'],
   template: `
 		<section id="courses" class="courses">
 			<h2>Master Your Skills</h2>
@@ -16,29 +17,6 @@ import { CourseCardComponent } from './course-card/course-card.component';
 				}
 			</div>
 		</section>
-  `,
-  styles: `
-    .courses {
-      padding: 8rem 7%;
-      background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 3rem;
-      font-size: 2.5rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, #818cf8 0%, #c4b5fd 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .course-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2.5rem;
-    }
   `
 })
 export class CoursesComponent {
