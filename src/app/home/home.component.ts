@@ -2,17 +2,20 @@ import { Component } from '@angular/core';
 import { HeroComponent } from './hero/hero.component';
 import { CoursesComponent } from './courses/courses.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
+import { SkillAssessmentComponent } from './skill-assessment/skill-assessment.component';
 
 @Component({
   selector: 'app-home',
   imports: [
     HeroComponent,
     CoursesComponent,
-    NewsletterComponent
+    NewsletterComponent,
+    SkillAssessmentComponent
   ],
   template: `
     <app-hero/>
     <app-newsletter/>
+    <app-skill-assessment/>
     <app-courses/>
   `,
   styles: ``
