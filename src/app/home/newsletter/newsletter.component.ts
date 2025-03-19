@@ -13,13 +13,18 @@ import { FormsModule, NgForm } from '@angular/forms';
 				<h2>Stay Updated</h2>
 				<p>Get the latest web development tips and tutorials in your inbox</p>
 				<form #newsletterForm="ngForm"
-              (ngSubmit)="onSubmit(newsletterForm)"
-              class="newsletter-form">
+              class="newsletter-form"
+              (ngSubmit)="onSubmitForm(newsletterForm)">
 					<input type="email"
-                 name="userEmail"
-                 [(ngModel)]="userEmail" 
+                 name="emailAddress"
+                 [(ngModel)]="userEmail"
                  placeholder="Enter your email" 
                  required>
+					<input type="email"
+								 name="alternateEmailAddress"
+								 [(ngModel)]="alternateEmail"
+								 placeholder="Enter your email"
+								 required>
 					<button type="submit">Subscribe</button>
 				</form>
 			</div>
@@ -28,8 +33,9 @@ import { FormsModule, NgForm } from '@angular/forms';
 })
 export class NewsletterComponent {
   userEmail: string = 'me@my-house.com';
+  alternateEmail: string = '';
 
-  onSubmit(form: NgForm): void {
+  onSubmitForm(form: NgForm): void {
     console.log(form.value);
   }
 }
