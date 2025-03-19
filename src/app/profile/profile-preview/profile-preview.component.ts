@@ -3,12 +3,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-profile-preview',
   imports: [],
-  template: `
-    <p>
-      profile-preview works!
-    </p>
-  `,
-  styles: ``
+  templateUrl: './profile-preview.component.html',
+  styleUrls: ['./profile-preview.component.scss']
 })
 export class ProfilePreviewComponent {
 
