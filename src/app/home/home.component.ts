@@ -3,6 +3,7 @@ import { HeroComponent } from './hero/hero.component';
 import { CoursesComponent } from './courses/courses.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { ContactComponent } from './contact/contact.component';
+import { SkillAssessmentComponent } from './skill-assessment/skill-assessment.component';
 
 @Component({
   selector: 'app-home',
@@ -10,11 +11,13 @@ import { ContactComponent } from './contact/contact.component';
     HeroComponent,
     CoursesComponent,
     NewsletterComponent,
-    ContactComponent
+    ContactComponent,
+    SkillAssessmentComponent
   ],
   template: `
     <app-hero/>
     <app-newsletter/>
+    <app-skill-assessment/>
     <app-courses/>
     <app-contact/>
   `,
