@@ -11,9 +11,9 @@ import { NewsletterComponent } from './newsletter/newsletter.component';
     NewsletterComponent
   ],
   template: `
-    <app-hero/>
+    <app-hero id="hero"/>
     <app-newsletter/>
-    <app-courses/>
+    <app-courses id="courses"/>
   `,
   styles: ``
 })
