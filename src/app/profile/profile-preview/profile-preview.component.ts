@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ProfileService } from '../profile.service';
 
 @Component({
   selector: 'app-profile-preview',
@@ -7,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./profile-preview.component.scss']
 })
 export class ProfilePreviewComponent {
-
+  private profileService = inject(ProfileService);
+  profile = this.profileService.getProfile();
 }
