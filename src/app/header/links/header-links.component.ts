@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header-links',
-  imports: [],
+  imports: [
+    RouterLink
+  ],
   template: `
 		<ul>
-			<li><a>Home</a></li>
-			<li><a>Courses</a></li>
-			<li><a>Contact</a></li>
+			<li><a routerLink="home">Home</a></li>
+			<li><a routerLink="." fragment="courses">Courses</a></li>
+			<li><a routerLink="." fragment="contact">Contact</a></li>
 		</ul>
   `,
   styles: `
