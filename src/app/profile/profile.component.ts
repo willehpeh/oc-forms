@@ -1,12 +1,19 @@
 import { Component } from '@angular/core';
+import { ProfileFormComponent } from './profile-form/profile-form.component';
+import { ProfilePreviewComponent } from './profile-preview/profile-preview.component';
 
 @Component({
   selector: 'app-profile',
-  imports: [],
+  imports: [
+    ProfileFormComponent,
+    ProfilePreviewComponent
+  ],
   template: `
 		<main class="profile-page">
 			<div class="profile-container">
 				<div class="profile-grid">
+          <app-profile-form/>
+          <app-profile-preview/>
         </div>
       </div>
     </main>
