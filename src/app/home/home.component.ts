@@ -15,11 +15,11 @@ import { SkillAssessmentComponent } from './skill-assessment/skill-assessment.co
     SkillAssessmentComponent
   ],
   template: `
-    <app-hero/>
+    <app-hero id="hero"/>
     <app-newsletter/>
     <app-skill-assessment/>
-    <app-courses/>
-    <app-contact/>
+    <app-courses id="courses"/>
+    <app-contact id="contact"/>
   `,
   styles: ``
 })
