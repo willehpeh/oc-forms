@@ -3,6 +3,7 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { ProfileService } from '../profile.service';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { tap } from 'rxjs';
+import { Profile } from '../profile';
 
 @Component({
   selector: 'app-profile-form',
@@ -26,7 +27,11 @@ export class ProfileFormComponent {
   constructor() {
     this.profileForm.valueChanges.pipe(
       takeUntilDestroyed(),
-      tap(profile => this.profileService.setProfile(profile))
+      tap(profile => this.onUpdateProfile(profile))
     ).subscribe();
+  }
+
+  onUpdateProfile(profile: Profile): void {
+    this.profileService.setProfile(profile);
   }
 }
