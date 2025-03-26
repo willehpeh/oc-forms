@@ -4,6 +4,7 @@ import { distinctUntilChanged, filter, map } from 'rxjs';
 import { CoursesService } from '../courses/courses.service';
 import { AsyncPipe } from '@angular/common';
 import { CourseCardComponent } from '../courses/course-card/course-card.component';
+import { URL_REGEX } from '../../core/constants/URL_REGEX';
 
 @Component({
   selector: 'app-contact',
@@ -23,8 +24,8 @@ export class ContactComponent {
     email: ['', [Validators.required, Validators.email]],
     course: ['', [Validators.required]],
     message: [''],
-    avatarUrl: ['']
-  });
+    avatarUrl: ['', [Validators.pattern(URL_REGEX)]]
+  }, { updateOn: 'blur' });
   selectedCourse$ = this.contactForm.valueChanges.pipe(
     map(form => form.course),
     filter(course => course !== ''),
