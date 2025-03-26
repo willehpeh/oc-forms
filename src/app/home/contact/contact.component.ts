@@ -30,4 +30,8 @@ export class ContactComponent {
     distinctUntilChanged(),
     map(course => this.coursesService.getCourseByType(course)),
   );
+
+  onSubmitForm() {
+    console.log(this.contactForm.value);
+  }
 }
