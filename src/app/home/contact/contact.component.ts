@@ -22,7 +22,8 @@ export class ContactComponent {
     name: [''],
     email: [''],
     course: [''],
-    message: ['']
+    message: [''],
+    avatarUrl: ['']
   });
   selectedCourse$ = this.contactForm.valueChanges.pipe(
     map(form => form.course),
@@ -30,6 +31,7 @@ export class ContactComponent {
     distinctUntilChanged(),
     map(course => this.coursesService.getCourseByType(course)),
   );
+  avatarUrl$ = this.contactForm.get('avatarUrl')!.valueChanges;
 
   onSubmitForm() {
     console.log(this.contactForm.value);
