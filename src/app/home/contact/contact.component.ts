@@ -20,7 +20,7 @@ export class ContactComponent {
   private coursesService = inject(CoursesService);
   contactForm = this.formBuilder.group({
     name: ['', [Validators.required]],
-    email: ['', [Validators.required]],
+    email: ['', [Validators.required, Validators.email]],
     course: ['', [Validators.required]],
     message: ['']
   });
@@ -32,6 +32,10 @@ export class ContactComponent {
   );
 
   onSubmitForm() {
+    if (!this.contactForm.valid) {
+      alert('Please finish filling in the form before submitting.');
+      return;
+    }
     console.log(this.contactForm.value);
   }
 }
