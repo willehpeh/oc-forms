@@ -31,5 +31,7 @@ export class ContactComponent {
     map(course => this.coursesService.getCourseByType(course)),
   );
 
-
+  onSubmitForm() {
+    console.log(this.contactForm.value);
+  }
 }
